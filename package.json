@@ -1,0 +1,38 @@
+{
+  "name": "node-koa2",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "SET NODE_ENV=dev && node bin/www",
+    "prod": "export NODE_ENV=prod && pm2 start bin/www",
+    "test": "export NODE_ENV=test && pm2 start bin/www"
+  },
+  "dependencies": {
+    "aliyun-sdk": "^1.10.19",
+    "axios": "^0.16.1",
+    "crypto": "^1.0.1",
+    "debug": "^2.6.3",
+    "exceptionless": "^1.5.5",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-router": "^7.1.1",
+    "koa-session2": "^2.2.5",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "log4js": "^2.4.1",
+    "memcached": "^2.2.2",
+    "node-schedule": "^1.2.5",
+    "pm2": "^2.9.1",
+    "pug": "^2.0.0-rc.1",
+    "xml2js": "^0.4.19",
+    "wechat-node-sp": "^0.1.2",
+    "ejs": "^2.5.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.8.1"
+  }
+}

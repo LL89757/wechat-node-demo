@@ -1,0 +1,5 @@
+/node_modules
+/logs
+/.vscode
+/config/prod.sys.config
+/config/test.sys.config

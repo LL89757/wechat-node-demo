@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "worker",
+            "script": "/myapp/bin/www",
+            "watch": false,
+            "instances": "max", 
+            "exec_mode": "cluster",
+            "log_date_format": "--YYYY-MM-DD HH:mm",
+            "error_file":"/root/.pm2/logs/error/err.log",
+            "out_file":"/root/.pm2/logs/out/out.log"
+        }
+    ]
+}
