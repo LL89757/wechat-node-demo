@@ -1,7 +1,6 @@
 const router = require("koa-router")();
 const testRouter = require("./testRouter");
 const context = require("../../utils/context");
-const _ = require("underscore");
 
 const validate = async (ctx, next) => {
     var sessionId = ctx.headers.xbxsessionid;
