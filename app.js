@@ -8,6 +8,7 @@ const views = require('koa-views')
 const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
+const path = require('path')
 // const logger = require('koa-logger')
 
 
@@ -20,7 +21,9 @@ const Store = require("./cache/memcachedStore");
 const currentContext = require("./utils/context");
 const logUtil = require('./utils/log');
 const wechat = require('./utils/wechatHelper');
+const static  = require('./middlewares/static');
 
+const staticPath="./public"
 // const currentContext=new context();
 // error handler
 onerror(app)
@@ -40,6 +43,8 @@ app.use(json())
 
 //添加格式化处理响应结果的中间件，在添加路由之前调用，仅对/api开头的url进行格式化处理
 app.use(rest.restify('/Api'));
+//静态服务中间件
+app.use(static(path.join(__dirname, staticPath)));
 /*
   初始化日志系统所需要的文件夹
 */

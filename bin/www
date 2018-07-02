@@ -4,7 +4,11 @@
  *  @Description: node server启动
  */
 const config = require("../config/config.index")
-var app = require('../app');
+try {
+  var app = require('../app');
+} catch (e) {
+  console.log(e)
+}
 var debug = require('debug')('demo:server');
 var http = require('http');
 
